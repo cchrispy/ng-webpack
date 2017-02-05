@@ -33076,8 +33076,15 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var app = _angular2.default.module('app', []);
 
-app.controller('mainController', function ($scope) {
+app.controller('mainController', ['$scope', 'mainService', function ($scope, mainService) {
   $scope.text = 'hey';
+  mainService.print();
+}]);
+
+app.service('mainService', function () {
+  this.print = function () {
+    console.log('i am in the service mainService!!!!');
+  };
 });
 
 /***/ })
