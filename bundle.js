@@ -33076,5 +33076,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var app = _angular2.default.module('app', []);
 
+app.controller('mainController', function ($scope) {
+  $scope.text = 'hey';
+});
+
 /***/ })
 /******/ ]);
