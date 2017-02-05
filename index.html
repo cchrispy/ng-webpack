@@ -8,7 +8,14 @@
 
 <div ng-app='app'>
   <div ng-controller='mainController'>
-    {{ text }}
+    {{ text }} <br/><br/>
+    Input: <input ng-model='foobar' size='50'/><button ng-click='clicked(foobar)'>Submit</button> <br/>
+    {{ lala }} <br/>
+    {{ foobar }}
+    <hr/>
+    <p ng-repeat='string in strings track by $index'>
+      {{ string }}
+    </p>
   </div>
 </div>
 
