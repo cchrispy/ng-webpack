@@ -33114,7 +33114,10 @@ app.directive('customDirective', function () {
 
 app.directive('secondDirective', function () {
   return {
-    template: _template_2.default
+    template: _template_2.default,
+    scope: {
+      strings: '=line'
+    }
   };
 });
 
@@ -33170,6 +33173,7 @@ app.controller('mainController', ['$scope', 'mainService', 'secondService', 'phi
   };
   $scope.rando = secondService.random();
   $scope.rando_2 = philzCoffee.random;
+  $scope.sup = 'SUPADOODLE';
 }]);
 
 app.service('mainService', function () {
@@ -33189,7 +33193,7 @@ app.service('mainService', function () {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var template = "\n  <div>\n    This is a template: template_1.js\n    yoyo\n    {{ strings }}\n  </div>\n";
+var template = "\n  <div>\n    This is a template: template_1.js\n    yoyo <br/>\n    {{ strings }}\n  </div>\n";
 
 exports.default = template;
 
@@ -33213,6 +33217,8 @@ app.controller('secondController', ['$scope', 'secondService', function ($scope,
   $scope.secondaryText = 'this is in secondController';
 
   $scope.moreText = secondService.random();
+
+  $scope.testingtesting = "\nTESTING \nTESTING TESTING\n";
 }]);
 
 /***/ })

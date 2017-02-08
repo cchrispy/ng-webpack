@@ -13,6 +13,7 @@ app.controller('mainController', ['$scope', 'mainService', 'secondService', 'phi
   }
   $scope.rando = secondService.random();
   $scope.rando_2 = philzCoffee.random;
+  $scope.sup = 'SUPADOODLE';
 }]);
 
 app.service('mainService', function() {

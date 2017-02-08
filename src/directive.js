@@ -24,6 +24,9 @@ import template_1 from './templates/template_1';
 
 app.directive('secondDirective', function() {
   return {
-    template: template_1
+    template: template_1,
+    scope: {
+      strings: '=line'
+    }
   }
 })

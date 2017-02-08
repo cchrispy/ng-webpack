@@ -8,4 +8,6 @@ app.controller('secondController', ['$scope', 'secondService', function($scope, 
 
   $scope.moreText = secondService.random();
 
+  $scope.testingtesting = "\nTESTING \nTESTING TESTING\n"
+
 }])
