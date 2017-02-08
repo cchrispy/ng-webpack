@@ -33115,7 +33115,7 @@ app.directive('customDirective', function () {
 app.directive('secondDirective', function () {
   return {
     template: _template_2.default,
-    scope: {
+    scope: { // isolated scope, so this directive isn't directly bound to a parent's scope variable
       strings: '=line'
     }
   };

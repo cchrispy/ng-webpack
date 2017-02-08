@@ -25,7 +25,7 @@ import template_1 from './templates/template_1';
 app.directive('secondDirective', function() {
   return {
     template: template_1,
-    scope: {
+    scope: { // isolated scope, so this directive isn't directly bound to a parent's scope variable
       strings: '=line'
     }
   }
