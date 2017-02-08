@@ -33093,7 +33093,9 @@ var _angular2 = _interopRequireDefault(_angular);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_angular2.default.module('app').directive('customDirective', function () {
+var app = _angular2.default.module('app');
+
+app.directive('customDirective', function () {
   return {
     template: '\n      <div>\n        I am in the directive!\n        {{ strings }}\n      </div>\n    '
   };

@@ -1,6 +1,8 @@
 import angular from 'angular';
 
-angular.module('app').directive('customDirective', function() {
+var app = angular.module('app');
+
+app.directive('customDirective', function() {
   return {
     template: `
       <div>
@@ -10,3 +12,5 @@ angular.module('app').directive('customDirective', function() {
     `
   }
 })
+
+
