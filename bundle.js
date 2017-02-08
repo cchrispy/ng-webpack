@@ -33106,6 +33106,12 @@ app.directive('customDirective', function () {
   };
 });
 
+// Using templateUrl for files not served from a server will
+// yield a cross-origin error.
+// To overcome this, we use ES6 template literals
+// to create the template in a javascript file rather than html
+
+
 app.directive('secondDirective', function () {
   return {
     template: _template_2.default
@@ -33202,9 +33208,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var app = _angular2.default.module('app');
 
-app.controller('secondController', ['$scope', function ($scope) {
+app.controller('secondController', ['$scope', 'secondService', function ($scope, secondService) {
 
   $scope.secondaryText = 'this is in secondController';
+
+  $scope.moreText = secondService.random();
 }]);
 
 /***/ })

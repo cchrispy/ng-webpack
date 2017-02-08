@@ -16,6 +16,10 @@ app.directive('customDirective', function() {
 
 
 
+// Using templateUrl for files not served from a server will
+// yield a cross-origin error.
+// To overcome this, we use ES6 template literals
+// to create the template in a javascript file rather than html
 import template_1 from './templates/template_1';
 
 app.directive('secondDirective', function() {
