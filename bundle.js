@@ -33091,6 +33091,10 @@ var _angular = __webpack_require__(0);
 
 var _angular2 = _interopRequireDefault(_angular);
 
+var _template_ = __webpack_require__(7);
+
+var _template_2 = _interopRequireDefault(_template_);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var app = _angular2.default.module('app');
@@ -33098,6 +33102,12 @@ var app = _angular2.default.module('app');
 app.directive('customDirective', function () {
   return {
     template: '\n      <div>\n        I am in the directive!\n        {{ strings }}\n      </div>\n    '
+  };
+});
+
+app.directive('secondDirective', function () {
+  return {
+    template: _template_2.default
   };
 });
 
@@ -33160,6 +33170,21 @@ app.service('mainService', function () {
     console.log(x);
   };
 });
+
+/***/ }),
+/* 6 */,
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var template = "\n  <div>\n    This is a template: template_1.js\n    yoyo\n    {{ strings }}\n  </div>\n";
+
+exports.default = template;
 
 /***/ })
 /******/ ]);
