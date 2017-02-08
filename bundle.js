@@ -33102,7 +33102,7 @@ var app = _angular2.default.module('app');
 
 app.directive('customDirective', function () {
   return {
-    template: '\n      <div>\n        I am in the directive!\n        {{ strings }}\n      </div>\n    '
+    template: '\n      <div>\n        I am in the directive!\n        <p>Hello World!!!</p>\n        {{ strings }}\n      </div>\n    '
   };
 });
 

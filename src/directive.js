@@ -7,6 +7,7 @@ app.directive('customDirective', function() {
     template: `
       <div>
         I am in the directive!
+        <p>Hello World!!!</p>
         {{ strings }}
       </div>
     `
