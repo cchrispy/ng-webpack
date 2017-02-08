@@ -33076,15 +33076,81 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var app = _angular2.default.module('app', []);
 
-app.controller('mainController', ['$scope', 'mainService', function ($scope, mainService) {
+__webpack_require__(5);
+__webpack_require__(3);
+__webpack_require__(4);
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _angular = __webpack_require__(0);
+
+var _angular2 = _interopRequireDefault(_angular);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+_angular2.default.module('app').directive('customDirective', function () {
+  return {
+    template: '\n      <div>\n        I am in the directive!\n        {{ strings }}\n      </div>\n    '
+  };
+});
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _angular = __webpack_require__(0);
+
+var _angular2 = _interopRequireDefault(_angular);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var app = _angular2.default.module('app');
+
+app.service('secondService', function () {
+  this.random = function () {
+    return Math.random();
+  };
+  this.value = 420;
+});
+
+app.service('philzCoffee', function () {
+  this.random = Math.random();
+});
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _angular = __webpack_require__(0);
+
+var _angular2 = _interopRequireDefault(_angular);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var app = _angular2.default.module('app');
+
+app.controller('mainController', ['$scope', 'mainService', 'secondService', 'philzCoffee', function ($scope, mainService, secondService, philzCoffee) {
   $scope.strings = ['first string'];
   $scope.text = 'hey';
-  mainService.print('yoyoyooo dawwwg');
+  mainService.print('yoyoyooo');
   $scope.foobar = 'bound to ng-model';
   $scope.clicked = function (text) {
     $scope.strings.push(text);
     console.log($scope.strings);
   };
+  $scope.rando = secondService.random();
+  $scope.rando_2 = philzCoffee.random;
 }]);
 
 app.service('mainService', function () {
