@@ -33079,6 +33079,7 @@ var app = _angular2.default.module('app', []);
 __webpack_require__(5);
 __webpack_require__(3);
 __webpack_require__(4);
+__webpack_require__(8);
 
 /***/ }),
 /* 3 */
@@ -33185,6 +33186,26 @@ Object.defineProperty(exports, "__esModule", {
 var template = "\n  <div>\n    This is a template: template_1.js\n    yoyo\n    {{ strings }}\n  </div>\n";
 
 exports.default = template;
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _angular = __webpack_require__(0);
+
+var _angular2 = _interopRequireDefault(_angular);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var app = _angular2.default.module('app');
+
+app.controller('secondController', ['$scope', function ($scope) {
+
+  $scope.secondaryText = 'this is in secondController';
+}]);
 
 /***/ })
 /******/ ]);
