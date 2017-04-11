@@ -7,35 +7,39 @@
 </head>
 <body ng-app='app'>
 
+  <div id='title' ng-controller='title'>
+    <h1>{{ name }}</h1>
+    <hr/>
+  </div>
+
   <div class='container'>
 
-    <div id='title' ng-controller='title'>
-      <h1>{{ name }}</h1>
-      <hr/>
-    </div>
+    <div class='sub-container flex-item-1'>
 
-    <div id='input'>
-      <div ng-controller='input'>
-        <form ng-submit='click()'>
-          <input ng-model='inputItem'/>
-          <input type='submit'/>
-        </form>
+      <div id='input' class='sub-flex-item-1'>
+        <div ng-controller='input'>
+          <form ng-submit='click()'>
+            <input ng-model='inputItem'/>
+            <input type='submit'/>
+          </form>
+        </div>
       </div>
+
+      <div id='buttons' class='sub-flex-item-2'>
+        <div ng-controller='buttons'>
+          <button>Button One</button>
+          <button>Button Two</button>
+          <button>Button Three</button>
+        </div>
+      </div>
+
     </div>
 
-    <div id='list'>
+    <div id='list' class='flex-item-2'>
       <div ng-controller='list'>
         <ul>
           <li ng-repeat='item in items | orderBy:"length" track by $index'>{{ item }}</li>
         </ul>
-      </div>
-    </div>
-
-    <div id='buttons'>
-      <div ng-controller='buttons'>
-        <button>Button One</button>
-        <button>Button Two</button>
-        <button>Button Three</button>
       </div>
     </div>
 

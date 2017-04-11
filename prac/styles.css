@@ -8,3 +8,38 @@
   margin: 10px;
   text-align: center;
 }
+
+.sub-container, .flex-item-1, .flex-item-2 {
+  border: 1px solid black;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  /*align-items: stretch;*/
+}
+
+.container .flex-item-1 {
+  flex-grow: 1;
+  align-self: flex-start;
+}
+
+.container .flex-item-2 {
+  flex-grow: 3;
+  align-self: flex-start;
+}
+
+.sub-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.sub-container .sub-flex-item-1 {
+  border: 1px solid black;
+}
+
+.sub-container .sub-flex-item-2 {
+  border: 1px solid black;
+}
