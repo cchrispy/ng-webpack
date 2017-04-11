@@ -13,8 +13,8 @@ app.controller('input', ['$scope', 'updateList', ($scope, updateList) => {
   }
 }])
 
-app.controller('list', ['$scope', ($scope) => {
-
+app.controller('list', ['$scope', 'updateList', ($scope, updateList) => {
+  $scope.items = updateList.getList();
 }])
 
 app.controller('buttons', ['$scope', ($scope) => {
