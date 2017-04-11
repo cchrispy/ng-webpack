@@ -6,11 +6,27 @@
   <link rel='stylesheet' href='styles.css'/>
 </head>
 <body ng-app='app'>
-  <div ng-controller='title'>
+  <div id='title' ng-controller='title'>
     <h1>{{ name }}</h1>
+    <hr/>
   </div>
 
-  <div ng-controller='input'></div>
+  <div id='input'>
+    <div ng-controller='input'>
+      <form ng-submit='click()'>
+        <input ng-model='inputItem'/>
+        <input type='submit'/>
+      </form>
+    </div>
+  </div>
+
+  <div id='list'>
+    <div ng-controller='list'></div>
+  </div>
+
+  <div id='buttons'>
+    <div ng-controller='buttons'></div>
+  </div>
 
 <script src='script.js'></script>
 </body>
