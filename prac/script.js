@@ -29,3 +29,4 @@ app.factory('updateList', () => {
     addToList: item => list.push(item)
   }
 })
+

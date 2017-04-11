@@ -6,30 +6,39 @@
   <link rel='stylesheet' href='styles.css'/>
 </head>
 <body ng-app='app'>
-  <div id='title' ng-controller='title'>
-    <h1>{{ name }}</h1>
-    <hr/>
-  </div>
 
-  <div id='input'>
-    <div ng-controller='input'>
-      <form ng-submit='click()'>
-        <input ng-model='inputItem'/>
-        <input type='submit'/>
-      </form>
+  <div class='container'>
+
+    <div id='title' ng-controller='title'>
+      <h1>{{ name }}</h1>
+      <hr/>
     </div>
-  </div>
 
-  <div id='list'>
-    <div ng-controller='list'>
-      <ul>
-        <li ng-repeat='item in items track by $index'>{{ item }}</li>
-      </ul>
+    <div id='input'>
+      <div ng-controller='input'>
+        <form ng-submit='click()'>
+          <input ng-model='inputItem'/>
+          <input type='submit'/>
+        </form>
+      </div>
     </div>
-  </div>
 
-  <div id='buttons'>
-    <div ng-controller='buttons'></div>
+    <div id='list'>
+      <div ng-controller='list'>
+        <ul>
+          <li ng-repeat='item in items | orderBy:"length" track by $index'>{{ item }}</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id='buttons'>
+      <div ng-controller='buttons'>
+        <button>Button One</button>
+        <button>Button Two</button>
+        <button>Button Three</button>
+      </div>
+    </div>
+
   </div>
 
 <script src='script.js'></script>
